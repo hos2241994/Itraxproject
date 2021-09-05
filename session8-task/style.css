@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    padding: 10px 20px;
+    outline: transparent;
+    border: transparent;
+    background-color: white;
+    text-transform: uppercase;
+}
+
+/* 
+==================
+Haeder
+==================
+ */
+
+header {
+    padding:0 100px;
+    height: 60px;
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.logo{
+    width: 20%;
+    padding: 15px 0;
+    float: left;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.nav{
+    width: 70%;
+    float: right;
+}
+
+.nav .nav-list {
+    text-align: right;
+}
+
+.nav-list .nav-item{
+    display: inline-block;
+}
+
+.nav-list .nav-item:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-item .nav-link{
+    padding: 20px 0;
+}
+
+/* 
+==================
+Home Section
+==================
+ */
+
+section.home{
+    background-image: url("http://www.engage.veented.com/business/wp-content/uploads/sites/114/2017/08/business-main.jpg");
+    background-size: cover;
+    height: 600px;
+    color: white;
+    position: relative;
+}
+
+.home .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.content p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.content .btn-blue{
+    background-color: #4274b7;
+    color: white;
+}
+
+.home .scroll-ani{
+    display: inline-block;
+    padding: 20px 12px;
+    border: 1px solid white;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%);
+}
+
+.scroll-ani .circ{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%);
+    visibility: hidden;
+    opacity: 0;
+    animation: scroll 2s linear 1s infinite;
+}
+
+
+@keyframes scroll {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    50%, 100%{
+        top: 50%;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
